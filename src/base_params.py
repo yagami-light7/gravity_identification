@@ -1,7 +1,19 @@
-import numpy as np
+'''
+基于thin SVD 的截断子空间基参数辨识
 
-"基于thin SVD 的截断子空间基参数辨识"
-"去掉零空间和近零空间分量后，辨识向量通常会更稳定，求解更简单，并且往往具有更好的测试集稳健性和泛化能力，但前提是奇异值截断阈值选择合理"
+功能：
+1.对原始辨识矩阵A进行thin SVD剔除零空间 将问题转为低维列满秩的最小二乘问题A_base
+2.对基参数辨识后的辨识矩阵进行最小二乘 求解出可辨识空间下的辨识投影向量alpha_hat
+3.将辨识向量alpha_hat投影回原始参数空间，得到完整的辨识向量pi_hat
+
+消除了原始零空间带来的不唯一性，并显著提升了辨识的数值稳定性
+去掉零空间和近零空间分量后，辨识向量通常会更稳定，求解更简单，并且往往具有更好的测试集稳健性和泛化能力，但前提是奇异值截断阈值选择合理
+
+'''
+
+
+
+import numpy as np
 
 # @brief    对力矩回归矩阵A进行SVD分析
 # @retval   返回SVD分解结果和有效秩
@@ -21,9 +33,26 @@ def analyze_regressor(A, tol=1e-10):
 def build_base_parameterization(A, tol=1e-10):
     U, s, Vt, rank = analyze_regressor(A, tol)
 
-    V_base = Vt[:rank, :].T #rank = 10
+    # A.shape = (6N, 60)
+    # thin SVD 后：
+    # U.shape  = (6N, 60)   假设 6N > 60
+    # s.shape  = (60,)
+    # Vt.shape = (60, 60)
+    #
+    # rank = r，为根据奇异值阈值得到的有效秩，r <= 60
 
-    A_base = A @ V_base # A_base.shape = (6N, rank)列满秩/高矩阵  A.shape = (6N, 10)  V_base.shape = (10, rank) 满秩 
+    # 取前 r 个右奇异向量，构造可辨识参数子空间基
+    # Vt[:rank, :].shape = (r, 60)
+    # V_base.shape       = (60, r)
+    V_base = Vt[:rank, :].T
+
+    # 将原始回归矩阵投影到可辨识参数子空间
+    # A.shape      = (6N, 60)
+    # V_base.shape = (60, r)
+    # A_base.shape = (6N, r)
+    #
+    # A_base 通常为列满秩矩阵，列数从 60 降为 r
+    A_base = A @ V_base
 
     return A_base, V_base, s, rank
 

@@ -1,8 +1,16 @@
+'''
+
+功能：
+1.导入urdf文件 创建模型和机器人数据
+2.根据关节角度向量构建q向量
+
+'''
+
 import pinocchio as pin
 from pathlib import Path
 import math
 
-urdf_path = Path(r"E:\RoboMaster\mec_arm\rm_arm_2025_last\urdf\rm_arm_2025_last.urdf")
+urdf_path = Path(r"E:\RoboMaster\mec_arm\mec_arm_model\urdf\mec_arm.urdf")
 
 
 # @brief    导入urdf文件并创建模型和数据
@@ -21,21 +29,12 @@ def build_q(model, theta):
     if len(theta) != 6:
         raise ValueError("theta must contain 6 joint angles")
 
-    # J1 J4 J6 continuous
-    q[0] = math.cos(theta[0])
-    q[1] = math.sin(theta[0])
-
-    q[2] = theta[1]
-
-    q[3] = theta[2]
-
-    q[4] = math.cos(theta[3])
-    q[5] = math.sin(theta[3])
-
-    q[6] = theta[4]
-
-    q[7] = math.cos(theta[5])
-    q[8] = math.sin(theta[5])
+    q[0] = theta[0]
+    q[1] = theta[1]
+    q[2] = theta[2]
+    q[3] = theta[3]
+    q[4] = theta[4]
+    q[5] = theta[5]
 
     return q
 

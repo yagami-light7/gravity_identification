@@ -1,3 +1,9 @@
+'''
+
+生成辨识结果数据data
+
+'''
+
 from pathlib import Path
 from datetime import datetime
 import json

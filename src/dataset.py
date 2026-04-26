@@ -1,3 +1,9 @@
+'''
+
+数据集类，用于存储重力辨识的样本数据
+
+'''
+
 from dataclasses import dataclass
 import numpy as np
 

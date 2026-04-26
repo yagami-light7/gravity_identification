@@ -1,3 +1,18 @@
+'''
+demo_synthetic.py
+
+对 pinocchio真值模型 进行辨识 以验证链路是否完善
+
+功能：
+1.使用 URDF 模型制作数据集
+2.利用数据集构造 力矩回归矩阵A 和 力矩向量b
+3.对力矩回归矩阵 A 进行基参数辨识得到 A_base 再利用力矩向量 b 最小二乘得到辨识向量 pi_hat
+4.利用测试集分别计算真实力矩（pinocchio真值）和预测力矩（pi_hat辨识结果）
+
+若二者差距较小 可证实当前系统辨识方案可行
+
+'''
+
 from pathlib import Path
 import sys
 import numpy as np
@@ -9,7 +24,7 @@ if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 from dataset import GravitySample
-from gravity import compute_gravity
+from gravity import pin_compute_gravity
 from identify import build_identification_matrices, predict_gravity
 from base_params import build_base_parameterization, identify_base_params, reconstruct_full_params
 from urdf_import import build_q, urdf_import, urdf_path
@@ -33,7 +48,7 @@ def make_synthetic_samples(model, data):
         # 构造q向量
         q = build_q(model, theta)
         # 计算力矩（urdf前向）
-        tau = compute_gravity(model, data, q)
+        tau = pin_compute_gravity(model, data, q)
         # 构造样本
         sample = GravitySample(theta=theta, tau=tau)
         samples.append(sample)
@@ -68,7 +83,7 @@ if __name__ == "__main__":
     theta_test = [0.3, 0.1, -0.2, 0.2, -0.1, 0.4]
     q_test = build_q(model, theta_test)
 
-    tau_true = compute_gravity(model, data, q_test)
+    tau_true = pin_compute_gravity(model, data, q_test)
     tau_pred = predict_gravity(model, data, q_test, pi_hat)
 
     print("tau_true =", tau_true)

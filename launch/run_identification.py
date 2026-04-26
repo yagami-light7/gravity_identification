@@ -1,3 +1,21 @@
+'''
+run_identification.py 
+
+重力参数辨识核心文件
+
+功能：
+1.提取样本csv文件中的数据 构建辨识矩阵 力矩向量
+2.对辨识矩阵进行基参数分析 得到可辨识空间下的基参数 并最小二乘得到辨识向量
+3.利用辨识向量预测重力力矩并与实际观测值进行对比分析.
+4.导出辨识结果 包括数据、图片、报告等
+
+本文件用于验证URDF模型能否大致解释真机数据 并且 在真机部署前分析样本数据可靠性 
+
+实际部署在launch\fit_trig_gravity_model.py
+
+'''
+
+
 from pathlib import Path
 import sys
 import numpy as np
@@ -62,7 +80,7 @@ if __name__ == "__main__":
     # 脚本所在目录，用于组织结果输出
     script_dir = Path(__file__).resolve().parent
     # 数据集路径
-    csv_path = PROJECT_ROOT / "data" / "gravity_samples_demo.csv"
+    csv_path = PROJECT_ROOT / "data" / "mc02_capture_cleaned.csv"
     # 所有辨识结果统一保存到 results 目录
     results_root = PROJECT_ROOT / "results"
     # 当前运行名称，这里直接使用 CSV 文件名

@@ -1,3 +1,9 @@
+'''
+
+生成辨识结果图片figure
+
+'''
+
 from pathlib import Path
 import math
 import numpy as np

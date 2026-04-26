@@ -1,3 +1,10 @@
+'''
+功能：读取CSV文件并提取重力样本数据
+
+在run_identification.py中调用后直接送入辨识
+
+'''
+
 from pathlib import Path
 import csv
 
