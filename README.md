@@ -1,8 +1,10 @@
 # 机械臂静态重力补偿参数辨识
 
-<p align="center">
-  <video src="video/VID_20260426_004041.mp4" controls muted width="720"></video>
-</p>
+
+
+https://github.com/user-attachments/assets/c9535d9c-64fe-4645-a2d3-28b1a365da3c
+
+
 
 ## 1. 实现思路
 
