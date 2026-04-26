@@ -13,13 +13,13 @@ https://github.com/user-attachments/assets/c9535d9c-64fe-4645-a2d3-28b1a365da3c
 机械臂的标准关节空间动力学可以写成：
 
 $$
-M(q)\ddot{q} + C(q,\dot{q})\dot{q} + g(q) = \tau + \tau_{ext}
+M(q)\ddot{q} + C(q\ \dot{q})\dot{q} + g(q) = \tau + \tau_{ext}
 $$
 
 其中：
 
 - $M(q)$ 是惯性矩阵
-- $C(q,\dot{q})\dot{q}$ 是科氏力 / 离心力项
+- $C(q\ \dot{q})\dot{q}$ 是科氏力 / 离心力项
 - $g(q)$ 是重力项
 - $\tau$ 是关节驱动力矩
 - $\tau_{ext}$ 是外部扰动或外力等效到关节空间后的力矩
@@ -40,7 +40,7 @@ $$
 在 Pinocchio 中，重力项对动力学参数是线性的，因此可以写成：
 
 $$
-\tau_g(q) = Y_g(q)\,\pi
+\tau_g(q) = Y_g(q)\pi
 $$
 
 其中：
