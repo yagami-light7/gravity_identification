@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+
+    <style>
+      .title { font: 700 24px "Segoe UI", "Microsoft YaHei", sans-serif; fill: #102A43; }
+      .subtitle { font: 400 14px "Segoe UI", "Microsoft YaHei", sans-serif; fill: #486581; }
+      .axis { stroke: #243B53; stroke-width: 2; }
+      .grid { stroke: #D9E2EC; stroke-width: 1; }
+      .tick { font: 400 13px "Segoe UI", "Microsoft YaHei", sans-serif; fill: #334E68; }
+      .label { font: 600 14px "Segoe UI", "Microsoft YaHei", sans-serif; fill: #243B53; }
+    </style>
+    
+<rect x="0" y="0" width="960" height="540" fill="#F8FBFF"/>
+<text x="90" y="32" class="title">Singular Value Spectrum</text>
+<text x="90" y="52" class="subtitle">log10 scale, used to reveal effective rank and parameter observability</text>
+<line x1="90" y1="450.0" x2="930" y2="450.0" class="grid"/>
+<text x="78" y="455.0" text-anchor="end" class="tick">-15.32</text>
+<line x1="90" y1="372.0" x2="930" y2="372.0" class="grid"/>
+<text x="78" y="377.0" text-anchor="end" class="tick">-11.9291</text>
+<line x1="90" y1="294.0" x2="930" y2="294.0" class="grid"/>
+<text x="78" y="299.0" text-anchor="end" class="tick">-8.5382</text>
+<line x1="90" y1="216.0" x2="930" y2="216.0" class="grid"/>
+<text x="78" y="221.0" text-anchor="end" class="tick">-5.1474</text>
+<line x1="90" y1="138.0" x2="930" y2="138.0" class="grid"/>
+<text x="78" y="143.0" text-anchor="end" class="tick">-1.7565</text>
+<line x1="90" y1="60.0" x2="930" y2="60.0" class="grid"/>
+<text x="78" y="65.0" text-anchor="end" class="tick">1.6344</text>
+<line x1="90" y1="450" x2="930" y2="450" class="axis"/>
+<line x1="90" y1="60" x2="90" y2="450" class="axis"/>
+<text x="26" y="255.0" transform="rotate(-90 26 255.0)" class="label">log10(sigma)</text>
+<polyline fill="none" stroke="#C84C09" stroke-width="3" points="90.0,60.0 166.36363636363637,65.9136170370615 242.72727272727272,71.32631160264742 319.0909090909091,73.79571384044255 395.45454545454544,77.42133170537812 471.8181818181818,85.91173934172207 548.1818181818182,93.14823296390313 624.5454545454545,96.84214752835652 700.9090909090909,104.74078088556325 777.2727272727273,158.510491104146 853.6363636363636,443.5335560203407 930.0,450.0"/>
+<circle cx="90.0" cy="60.0" r="3.5" fill="#C84C09"/>
+<circle cx="166.36363636363637" cy="65.9136170370615" r="3.5" fill="#C84C09"/>
+<circle cx="242.72727272727272" cy="71.32631160264742" r="3.5" fill="#C84C09"/>
+<circle cx="319.0909090909091" cy="73.79571384044255" r="3.5" fill="#C84C09"/>
+<circle cx="395.45454545454544" cy="77.42133170537812" r="3.5" fill="#C84C09"/>
+<circle cx="471.8181818181818" cy="85.91173934172207" r="3.5" fill="#C84C09"/>
+<circle cx="548.1818181818182" cy="93.14823296390313" r="3.5" fill="#C84C09"/>
+<circle cx="624.5454545454545" cy="96.84214752835652" r="3.5" fill="#C84C09"/>
+<circle cx="700.9090909090909" cy="104.74078088556325" r="3.5" fill="#C84C09"/>
+<circle cx="777.2727272727273" cy="158.510491104146" r="3.5" fill="#C84C09"/>
+<circle cx="853.6363636363636" cy="443.5335560203407" r="3.5" fill="#C84C09"/>
+<circle cx="930.0" cy="450.0" r="3.5" fill="#C84C09"/>
+<text x="90.0" y="472" text-anchor="middle" class="tick">1</text>
+<text x="166.36363636363637" y="472" text-anchor="middle" class="tick">2</text>
+<text x="242.72727272727272" y="472" text-anchor="middle" class="tick">3</text>
+<text x="319.0909090909091" y="472" text-anchor="middle" class="tick">4</text>
+<text x="395.45454545454544" y="472" text-anchor="middle" class="tick">5</text>
+<text x="471.8181818181818" y="472" text-anchor="middle" class="tick">6</text>
+<text x="548.1818181818182" y="472" text-anchor="middle" class="tick">7</text>
+<text x="624.5454545454545" y="472" text-anchor="middle" class="tick">8</text>
+<text x="700.9090909090909" y="472" text-anchor="middle" class="tick">9</text>
+<text x="777.2727272727273" y="472" text-anchor="middle" class="tick">10</text>
+<text x="853.6363636363636" y="472" text-anchor="middle" class="tick">11</text>
+<text x="930.0" y="472" text-anchor="middle" class="tick">12</text>
+</svg>

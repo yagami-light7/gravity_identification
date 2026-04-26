@@ -1,0 +1,23 @@
+{
+  "csv_path": "E:\\RoboMaster\\mec_arm\\gravity_identification\\data\\gravity_samples_demo.csv",
+  "num_samples": 2,
+  "A_shape": [
+    12,
+    60
+  ],
+  "b_shape": [
+    12
+  ],
+  "A_base_shape": [
+    12,
+    10
+  ],
+  "V_base_shape": [
+    60,
+    10
+  ],
+  "rank": 10,
+  "rank_base": 10,
+  "mean_error": 2.3269359868608006e-16,
+  "max_error": 2.851905718016589e-16
+}

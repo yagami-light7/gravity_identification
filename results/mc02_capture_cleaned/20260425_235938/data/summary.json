@@ -1,0 +1,23 @@
+{
+  "csv_path": "E:\\RoboMaster\\mec_arm\\gravity_identification\\data\\mc02_capture_cleaned.csv",
+  "num_samples": 8692,
+  "A_shape": [
+    52152,
+    60
+  ],
+  "b_shape": [
+    52152
+  ],
+  "A_base_shape": [
+    52152,
+    10
+  ],
+  "V_base_shape": [
+    60,
+    10
+  ],
+  "rank": 10,
+  "rank_base": 10,
+  "mean_error": 1.6293869272713613,
+  "max_error": 4.023201968901896
+}

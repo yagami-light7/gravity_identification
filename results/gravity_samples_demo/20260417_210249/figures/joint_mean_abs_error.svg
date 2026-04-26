@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+
+    <style>
+      .title { font: 700 24px "Segoe UI", "Microsoft YaHei", sans-serif; fill: #102A43; }
+      .subtitle { font: 400 14px "Segoe UI", "Microsoft YaHei", sans-serif; fill: #486581; }
+      .axis { stroke: #243B53; stroke-width: 2; }
+      .grid { stroke: #D9E2EC; stroke-width: 1; }
+      .tick { font: 400 13px "Segoe UI", "Microsoft YaHei", sans-serif; fill: #334E68; }
+      .label { font: 600 14px "Segoe UI", "Microsoft YaHei", sans-serif; fill: #243B53; }
+    </style>
+    
+<rect x="0" y="0" width="960" height="540" fill="#F8FBFF"/>
+<text x="90" y="32" class="title">Joint Mean Absolute Error</text>
+<text x="90" y="52" class="subtitle">Average absolute torque prediction error for each joint</text>
+<line x1="90" y1="450.0" x2="930" y2="450.0" class="grid"/>
+<text x="78" y="455.0" text-anchor="end" class="tick">0</text>
+<line x1="90" y1="372.0" x2="930" y2="372.0" class="grid"/>
+<text x="78" y="377.0" text-anchor="end" class="tick">3.7e-17</text>
+<line x1="90" y1="294.0" x2="930" y2="294.0" class="grid"/>
+<text x="78" y="299.0" text-anchor="end" class="tick">7.5e-17</text>
+<line x1="90" y1="216.0" x2="930" y2="216.0" class="grid"/>
+<text x="78" y="221.0" text-anchor="end" class="tick">1.1e-16</text>
+<line x1="90" y1="138.0" x2="930" y2="138.0" class="grid"/>
+<text x="78" y="143.0" text-anchor="end" class="tick">1.5e-16</text>
+<line x1="90" y1="60.0" x2="930" y2="60.0" class="grid"/>
+<text x="78" y="65.0" text-anchor="end" class="tick">1.9e-16</text>
+<line x1="90" y1="450" x2="930" y2="450" class="axis"/>
+<line x1="90" y1="60" x2="90" y2="450" class="axis"/>
+<text x="26" y="255.0" transform="rotate(-90 26 255.0)" class="label">mean absolute error (N*m)</text>
+<rect x="114.5" y="434.0303925561089" width="91.0" height="15.96960744389111" fill="#2F6FED" rx="4" ry="4"/>
+<text x="160.0" y="472" text-anchor="middle" class="tick">J1</text>
+<rect x="254.5" y="60.0" width="91.0" height="390.0" fill="#2F6FED" rx="4" ry="4"/>
+<text x="300.0" y="472" text-anchor="middle" class="tick">J2</text>
+<rect x="394.5" y="269.44444444444446" width="91.0" height="180.55555555555554" fill="#2F6FED" rx="4" ry="4"/>
+<text x="440.0" y="472" text-anchor="middle" class="tick">J3</text>
+<rect x="534.5" y="315.03472222222223" width="91.0" height="134.96527777777777" fill="#2F6FED" rx="4" ry="4"/>
+<text x="580.0" y="472" text-anchor="middle" class="tick">J4</text>
+<rect x="674.5" y="340.3125" width="91.0" height="109.6875" fill="#2F6FED" rx="4" ry="4"/>
+<text x="720.0" y="472" text-anchor="middle" class="tick">J5</text>
+<rect x="814.5" y="407.73914261843436" width="91.0" height="42.26085738156567" fill="#2F6FED" rx="4" ry="4"/>
+<text x="860.0" y="472" text-anchor="middle" class="tick">J6</text>
+</svg>
