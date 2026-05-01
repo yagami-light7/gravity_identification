@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mec_arm_6dof">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0686759023080007 4.58966669046099E-05 0.00802681232052238"
+        rpy="0 0 0" />
+      <mass
+        value="1.13294377521745" />
+      <inertia
+        ixx="0.00188789576054213"
+        ixy="-4.61086428666801E-06"
+        ixz="-1.6520981603272E-08"
+        iyy="0.00304580142479654"
+        iyz="-1.00214597277493E-07"
+        izz="0.00489845053293464" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="1">
+        <color
+          rgba="0.080000 0.040000 0.180000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Empty_Link1">
+    <inertial>
+      <origin
+        xyz="-0.00594143089651693 0.0147620169926348 0.134007745461851"
+        rpy="0 0 0" />
+      <mass
+        value="2.01428349544223" />
+      <inertia
+        ixx="0.00429962321274124"
+        ixy="1.36522208637239E-06"
+        ixz="6.17278366357096E-05"
+        iyy="0.00426652200846234"
+        iyz="-2.04458192400264E-05"
+        izz="0.00384521324210296" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link1.STL" />
+      </geometry>
+      <material
+        name="2">
+        <color
+          rgba="0.120000 0.080000 0.520000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="Joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Empty_Link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.10"
+      upper="+3.10"
+      effort="20"
+      velocity="2.0" />
+  </joint>
+
+  <link
+    name="Empty_Link2">
+    <inertial>
+      <origin
+        xyz="0.168085276158061 0.003099453371461 0.0257831114205778"
+        rpy="0 0 0" />
+      <mass
+        value="1.08998000132933" />
+      <inertia
+        ixx="0.00160720921922378"
+        ixy="-7.52622443320763E-05"
+        ixz="1.48938139128472E-05"
+        iyy="0.00700482301673562"
+        iyz="4.42129888941883E-07"
+        izz="0.00723601144662721" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link2.STL" />
+      </geometry>
+      <material
+        name="3">
+        <color
+          rgba="0.110000 0.120000 0.580000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="Joint2"
+    type="revolute">
+    <origin
+      xyz="0 0.0324999999999998 0.193"
+      rpy="-1.57079632679489 -0.467936330721615 -3.14159250487207" />
+    <parent
+      link="Empty_Link1" />
+    <child
+      link="Empty_Link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.60"
+      upper="0"
+      effort="20"
+      velocity="2.0" />
+  </joint>
+
+  <link
+    name="Empty_Link3">
+    <inertial>
+      <origin
+        xyz="0.128764782125023 0.00302110230705749 0.0340461897421608"
+        rpy="0 0 0" />
+      <mass
+        value="0.522697072035793" />
+      <inertia
+        ixx="0.00043216113803943"
+        ixy="-5.02423030752487E-06"
+        ixz="-5.36798881085007E-08"
+        iyy="0.000877371748783586"
+        iyz="9.17708090055539E-08"
+        izz="0.000808609023248165" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link3.STL" />
+      </geometry>
+      <material
+        name="4">
+        <color
+          rgba="0.090000 0.180000 0.650000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="Joint3"
+    type="revolute">
+    <origin
+      xyz="0.304 0 -0.0025"
+      rpy="0 0 -2.6737" />
+    <parent
+      link="Empty_Link2" />
+    <child
+      link="Empty_Link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="4.0"
+      effort="20"
+      velocity="2.0" />
+  </joint>
+
+  <link
+    name="Empty_Link4">
+    <inertial>
+      <origin
+        xyz="6.3089209474135E-05 1.2534448846746E-05 0.00493120483733125"
+        rpy="0 0 0" />
+      <mass
+        value="0.680958682454081" />
+      <inertia
+        ixx="0.000285473000740425"
+        ixy="2.55940930870172E-05"
+        ixz="4.88809087380181E-07"
+        iyy="0.000233369907629536"
+        iyz="-6.58951003367431E-08"
+        izz="0.000322924471582946" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link4.STL" />
+      </geometry>
+      <material
+        name="5">
+        <color
+          rgba="0.070000 0.300000 0.700000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Joint4_zero_link" />
+
+  <joint
+    name="Joint4"
+    type="revolute">
+    <origin
+      xyz="0.32542 0.0070546 0.034"
+      rpy="0.021675 1.5708 0" />
+    <parent
+      link="Empty_Link3" />
+    <child
+      link="Joint4_zero_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.10"
+      upper="3.10"
+      effort="20"
+      velocity="2.0" />
+  </joint>
+
+  <joint
+    name="Joint4_zero_offset"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -0.3967" />
+      <!-- -0.3967 -->
+    <parent
+      link="Joint4_zero_link" />
+    <child
+      link="Empty_Link4" />
+  </joint>
+
+
+  <link
+    name="Empty_Link5">
+    <inertial>
+      <origin
+        xyz="-0.00107244655161731 0.0135802023082673 0.0418204923880171"
+        rpy="0 0 0" />
+      <mass
+        value="0.404599192331128" />
+      <inertia
+        ixx="0.000118735536323902"
+        ixy="-1.28904946096387E-05"
+        ixz="3.57191115513863E-11"
+        iyy="0.000219145033806168"
+        iyz="-1.73981472830066E-10"
+        izz="0.000142592051535857" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link5.STL" />
+      </geometry>
+      <material
+        name="6">
+        <color
+          rgba="0.070000 0.420000 0.760000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Joint5_zero_link" />
+
+  <joint
+    name="Joint5"
+    type="revolute">
+    <origin
+      xyz="-0.038577 -0.016159 0.0995"
+      rpy="1.5708 0 1.9675" />
+      <!-- 1.9675 - 1.5708 = 0.3967 -->
+    <parent
+      link="Empty_Link4" />
+    <child
+      link="Joint5_zero_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="+3.10"
+      effort="20"
+      velocity="2.0" />
+  </joint>
+
+  <joint
+    name="Joint5_zero_offset"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 1.44484" /> 
+      <!-- -0.12596+1.5708 -->
+    <parent
+      link="Joint5_zero_link" />
+    <child
+      link="Empty_Link5" />
+  </joint>
+
+  <link
+    name="Empty_Link6">
+    <inertial>
+      <origin
+        xyz="0.000151094846238868 8.71683389527256E-05 0.0773440078372394"
+        rpy="0 0 0" />
+      <mass
+        value="0.495575589597777" />
+      <inertia
+        ixx="0.000350160875256342"
+        ixy="-0.000178536373193741"
+        ixz="2.38016307044856E-08"
+        iyy="0.000435758546339801"
+        iyz="4.27073665743903E-08"
+        izz="0.000458546828755725" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link6.STL" />
+      </geometry>
+      <material
+        name="7">
+        <color
+          rgba="0.090000 0.560000 0.820000 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mec_arm_model/meshes/Empty_Link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Joint6_zero_link" />
+
+  <joint
+    name="Joint6"
+    type="revolute">
+    <origin
+      xyz="-0.0038378 0.030308 0.041825"
+      rpy="-1.5708 1.1723 0.12596" />
+      <!-- 0.12569 -->
+    <parent
+      link="Empty_Link5" />
+    <child
+      link="Joint6_zero_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="20"
+      velocity="2.0" />
+  </joint>
+
+    <joint
+    name="Joint6_zero_offset"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -0.3" />
+    <parent
+      link="Joint6_zero_link" />
+    <child
+      link="Empty_Link6" />
+  </joint>
+  
+  <link name="TCP_link" />
+
+  <joint 
+    name="TCP_fixed_joint" 
+    type="fixed">
+    <origin
+      xyz="0 0 0.20"
+      rpy="0 0 -0.8724" />
+    <parent
+      link="Empty_Link6" />
+    <child
+      link="TCP_link" />
+  </joint>
+
+</robot>

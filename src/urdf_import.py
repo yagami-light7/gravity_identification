@@ -10,7 +10,8 @@ import pinocchio as pin
 from pathlib import Path
 import math
 
-urdf_path = Path(r"E:\RoboMaster\mec_arm\mec_arm_model\urdf\mec_arm.urdf")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+urdf_path = PROJECT_ROOT / "mec_arm_model" / "urdf" / "mec_arm.urdf"
 
 
 # @brief    导入urdf文件并创建模型和数据
